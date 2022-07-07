@@ -1,10 +1,14 @@
 import React from 'react';
-import logo from '../logo.svg';
 import '../App.css';
+import {  GoalTable } from '../components/GoalTable';
+import { Quote } from '../features/quotes/Quote';
 
 function App() {
   return (
-    <h1>Hwllo</h1>
+    <div>
+      <GoalTable />
+      <Quote />
+    </div>
   );
 }
 

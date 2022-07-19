@@ -19,13 +19,13 @@ export const GoalTable = () => {
 				<h1 className="center">What's the plan for today?</h1>
 				<div className="input-section">
 					<input
-						id="goal-name"
+						className="goal-input"
 						type="text"
 						value={goalName}
 						onChange={(e) => setGoalName(e.currentTarget.value)}
 					/>
 				</div>
-				<button className="center">Add</button>
+				<button className="goal-add">Add</button>
 			</form>
 			<Goals />
 		</div>

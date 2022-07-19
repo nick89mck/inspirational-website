@@ -1,21 +1,9 @@
 import { Goal } from "./Goal"
+import { selectGoals } from "./goalsSlice"
+import { useSelector } from "react-redux";
 
 const Goals = () => {
-	const goals = {
-		'1': {
-			id: '1',
-			name: 'Test Goal'
-		},
-		'2': {
-			id: '2',
-			name: 'Another goal'
-		},
-		'3': {
-			id: '3',
-			name: 'Yet Another'
-		}
-	
-	}
+	const goals = useSelector(selectGoals)
 
 	return (
 		<div>
@@ -25,7 +13,7 @@ const Goals = () => {
 						id={goal.id}
 						name={goal.name}
 						key={goal.id}
-					/>
+					/>					
 				))}
 			</ul>
 		</div>

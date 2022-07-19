@@ -16,13 +16,10 @@ const goalsSlice = createSlice(
 				};
 			},
 			removeGoal: (state, action) => {
-				delete state.goals[action.payload.id];
+				delete state.goals[action.payload];
 			},
 			completeGoal: (state, action) => {
-				const {id} = action.payload;
-				state.goals[id] = {
-					isComplete: true
-				}
+				state.goals[action.payload].isComplete = true
 			}
 		}	
 	}

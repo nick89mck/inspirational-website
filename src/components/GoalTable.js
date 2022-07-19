@@ -1,8 +1,12 @@
 import React, {useState} from "react"
 import Goals from "../features/goals/Goals"
+import { addGoal } from "../features/goals/goalsSlice"
+import { useDispatch } from "react-redux"
+import { v4 as uuidv4 } from 'uuid'
 
 export const GoalTable = () => {
 	const [goalName, setGoalName] = useState('')
+	const dispatch = useDispatch()
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -10,7 +14,14 @@ export const GoalTable = () => {
 			return;
 		}
 		//dispatch addGoal action here
-	
+		dispatch(addGoal(
+			{
+				id: uuidv4(),
+				name: goalName
+			}
+		)
+		)
+		setGoalName('')
 	}
 
 	return (
@@ -25,7 +36,7 @@ export const GoalTable = () => {
 						onChange={(e) => setGoalName(e.currentTarget.value)}
 					/>
 				</div>
-				<button className="goal-add">Add</button>
+				<input type='submit' className="goal-add" />
 			</form>
 			<Goals />
 		</div>

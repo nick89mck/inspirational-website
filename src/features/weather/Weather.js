@@ -49,7 +49,7 @@ export const Weather = () => {
 	const weatherInfo = weather.weather[0]
 
 	return (
-		<div>
+		<div className="weather">
 			<h3>{weatherInfo.main}</h3>
 			<h4>{weatherInfo.description}</h4>
 		</div>

@@ -1,13 +1,109 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: darkslategray;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-weight: 100;
+  margin: 10px
+}
+
+input {
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+}
+.goal {
+  position: relative;
+}
+
+.goal-input {
+  box-sizing: border-box;
+  background-color:rgb(8, 137, 177, .2);
+  border-radius: 9px;
+  border: 1px solid rgb(0, 0, 0);
+  transition: .3s border-color;
+}
+
+.goal-input:hover {
+  border: 1px solid rgb(206, 206, 206)
+}
+
+.goal #goal-buttons {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+}
+
+.goal:hover #goal-buttons {
+  display: block
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  padding:5px 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: rgba(233, 233, 233, 0.616);
+  transition: .3s background-color;
+  margin: 3px;
+}
+
+.goal-add:hover {
+  background-color: white;
+}
+.goal-complete {
+  background-color: rgba(0, 124, 31, 0.24);
+}
+.goal-complete:hover {
+  background-color: rgba(0, 124, 31, 0.8);
+}
+.goal-remove {
+  background-color: rgba(250, 0, 0, 0.24);
+}
+.goal-remove:hover {
+  background-color: rgba(250, 0, 0, .8);
+}
+
+
+.weather {
+  text-align: right;
+  margin: 10px;
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.author {
+  margin-top: 0;
+  font-weight: 50;
+}
+
+li {  
+  list-style-type: none;
+  border: 1px solid black;
+  margin: 10px;
+  background-color: rgba(127, 255, 212, 0.288);
+}
+
+.goal-container {
+  flex-wrap: nowrap;
 }

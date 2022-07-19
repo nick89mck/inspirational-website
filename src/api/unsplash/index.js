@@ -1,6 +1,4 @@
-import { unsplashAccess } from "../../../headers"
-
-const API_URL = `https://api.unsplash.com/search/photos?query=nature&page=1&per_page=5&client_id=${unsplashAccess}`;
+const API_URL = `https://api.unsplash.com/search/photos?query=nature&page=1&per_page=5&client_id=${process.env.REACT_APP_unsplashAccess}`;
 
 export const getImage = async () => {
 	const response = await fetch(API_URL);

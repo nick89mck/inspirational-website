@@ -3,7 +3,7 @@
 export const Quote = () => {
 
 	const exampleQuote = {
-		quote: 'Every rose has its thorn.',
+		quote: '"Every rose has its thorn."',
 		author: 'Bret Michaels',
 		category: 'Famous'
 	}

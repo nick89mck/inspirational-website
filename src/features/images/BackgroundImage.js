@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getBackgroundImage, s } from "./imagesSlice";
+import { getBackgroundImage } from "./imagesSlice";
 
 export const BackgroundImage = () => {
 	const { allImages, activeImageIndex } = useSelector(

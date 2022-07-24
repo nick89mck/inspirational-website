@@ -107,3 +107,22 @@ li {
 .goal-container {
   flex-wrap: nowrap;
 }
+
+.background {
+  position: absolute;
+  z-index: -1;
+}
+
+.background-image-container {
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+#background-image {
+  opacity: .5;
+  width: 100%;
+  height: auto;
+}

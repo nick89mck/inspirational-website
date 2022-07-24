@@ -35,8 +35,6 @@ const imagesSlice = createSlice(
 	}
 )
 
-export const selectActiveImage = (state) => state.images.activeImage;
-export const selectAllImages = (state) => state.images.allImages
 export const { switchToNextImage, switchToPreviousImage } = imagesSlice.actions
 
 export default imagesSlice.reducer;

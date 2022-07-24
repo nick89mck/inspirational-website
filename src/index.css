@@ -16,10 +16,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.goal-form {
+  text-align: center;
+}
 
 h1 {
   font-weight: 100;
-  margin: 10px
+  margin: 10px;
+  text-align: center;
+
+
+}
+
+.display-text {
+  background-color: rgba(191, 220, 247, .7);
+  align-self: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%
 }
 
 input {
@@ -29,6 +43,10 @@ input {
 }
 .goal {
   position: relative;
+}
+
+.goal-add {
+  width: 100px
 }
 
 .goal-input {
@@ -106,4 +124,31 @@ li {
 
 .goal-container {
   flex-wrap: nowrap;
+}
+
+.background {
+  margin: 0;
+  position: absolute;
+  height: 80%;
+  z-index: -1;
+}
+
+.background-image-container {
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#background-image {
+  opacity: .5;
+  min-height: 100%;
+  min-width: 1024px;
+
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  
 }

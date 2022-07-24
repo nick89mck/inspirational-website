@@ -25,9 +25,9 @@ export const GoalTable = () => {
 	}
 
 	return (
-		<div>
-			<form onSubmit={handleSubmit}>
-				<h1 className="center">What's the plan for today?</h1>
+		<div  className="goal-form">
+			<form className="goal-form" onSubmit={handleSubmit}>
+				<h1 className="display-text">What's the plan for today?</h1>
 				<div className="input-section">
 					<input
 						className="goal-input"

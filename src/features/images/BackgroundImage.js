@@ -14,7 +14,7 @@ export const BackgroundImage = () => {
 
 	return (
 		<div className='background-image-container'>
-			<img src={allImages[activeImageIndex] + '&auto=format'} alt='' id='background-image' />
+			<img src={allImages[activeImageIndex] + '&auto=format&fit=clip'} alt='' id='background-image' />
 		</div>
 	)
 };

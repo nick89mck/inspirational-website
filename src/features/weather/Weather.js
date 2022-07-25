@@ -15,12 +15,12 @@ export const Weather = () => {
 			<img 
 				src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
 				alt={data.description}
-				height='100'
-				width='100'
+				height='50'
+				width='50'
 			/>
 			<div className="weather-text">
-				<h3>{temperature}°</h3>
-				<h4>{city}, {state}</h4>
+				<span>{temperature}°</span>
+				<span>{city}, {state}</span>
 			</div>
 			
 		</div>

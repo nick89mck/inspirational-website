@@ -18,22 +18,31 @@ code {
 }
 .goal-form {
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 15px
+}
+
+.text-wrapper {
+  justify-self: center;
+  padding: 10px;
+  
 }
 
 h1 {
   font-weight: 100;
   margin: 10px;
   text-align: center;
-
+  
 
 }
 
 .display-text {
-  background-color: rgba(191, 220, 247, .7);
+  
   align-self: center;
   justify-content: center;
   margin: 0;
-  width: 100%
+
 }
 
 input {
@@ -41,6 +50,12 @@ input {
   margin: 10px 0;
   padding: 10px;
 }
+
+.goals-list {
+  margin: 20px;
+  padding: 0;
+}
+
 .goal {
   position: relative;
 }
@@ -51,7 +66,7 @@ input {
 
 .goal-input {
   box-sizing: border-box;
-  background-color:rgb(8, 137, 177, .2);
+  background-color:rgb(8, 137, 177, .9);
   border-radius: 9px;
   border: 1px solid rgb(0, 0, 0);
   transition: .3s border-color;
@@ -87,22 +102,48 @@ button {
   background-color: white;
 }
 .goal-complete {
-  background-color: rgba(0, 124, 31, 0.24);
+  background-color: rgba(0, 124, 31, .8);
 }
 .goal-complete:hover {
-  background-color: rgba(0, 124, 31, 0.8);
+  background-color: rgb(224, 224, 224);
 }
 .goal-remove {
-  background-color: rgba(250, 0, 0, 0.24);
-}
-.goal-remove:hover {
   background-color: rgba(250, 0, 0, .8);
 }
+.goal-remove:hover {
+  background-color: rgb(224, 224, 224);
+}
 
+span {
+  margin: 5px;
+  padding: 5px
+}
 
-.weather {
-  text-align: right;
-  margin: 10px;
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: right;
+}
+
+.weather-container {
+  display: flex;
+  border: 1px black solid;
+  border-radius:  10px;
+  justify-content: right;
+  align-items: center;
+  
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  margin: 5px;
+  padding-right: 3px;
+  background-color: rgba(217, 255, 255, 0.4);
+}
+
+.weather-text {
+
 }
 
 .quote {
@@ -128,27 +169,25 @@ li {
 
 .background {
   margin: 0;
-  position: absolute;
-  height: 80%;
+  position: relative;
+  height: 100%;
   z-index: -1;
 }
 
 .background-image-container {
   overflow: hidden;
-  position: relative;
+  position: absolute;
   background-repeat: no-repeat;
   background-position: center;
+  object-fit:fill
 }
 
 #background-image {
-  opacity: .5;
+  opacity: .1;
   min-height: 100%;
   min-width: 1024px;
-
-
   width: 100%;
   height: 100%;
-
-  object-fit: cover;
+  object-fit: fill;
   
 }

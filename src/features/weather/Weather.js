@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { selectWeather, getWeather } from "./weatherSlice"
+import { getWeather } from "./weatherSlice"
 import { useSelector, useDispatch } from "react-redux"
 
 export const Weather = () => {
@@ -11,9 +11,18 @@ export const Weather = () => {
   }, [dispatch, city, state])	
 
 	return (
-		<div className="weather">
-			<h3>{temperature}°</h3>
-			<h4>{data.description}</h4>
+		<div className="weather-container">
+			<img 
+				src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+				alt={data.description}
+				height='50'
+				width='50'
+			/>
+			<div className="weather-text">
+				<span>{temperature}°</span>
+				<span>{city}, {state}</span>
+			</div>
+			
 		</div>
 	)
 }
